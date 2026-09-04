@@ -1,0 +1,27 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	self. dir = vmath.vector3()
+	self.velocidad = 100
+end
+
+function update(self, dt)
+	if vmath.length(self.dir) > 0 then
+		local pos = go.get_position()
+		pos = pos + vmath.normalize(self.dir) * self.velocidad * dt
+		go.set_position(pos)
+		self.dir = vmath.vector3()
+	end
+end
+
+function on_message(self, message_id, message, sender)
+
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("arriba") then self.dir.y = 1
+	elseif action_id == hash("abajo") then self.dir.y = -1
+	elseif action_id == hash("izquierda") then self.dir.x = -1
+	elseif action_id == hash("derecha") then self.dir.x = 1
+	end
+end
+
