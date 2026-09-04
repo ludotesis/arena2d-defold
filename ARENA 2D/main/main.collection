@@ -1,25 +1,39 @@
 name: "main"
+instances {
+  id: "jugador"
+  prototype: "/go/jugador.go"
+  position {
+    x: 129.0
+    y: 80.0
+  }
+}
+instances {
+  id: "samurai"
+  prototype: "/go/samurai.go"
+  position {
+    x: 129.43236
+    y: 39.925594
+  }
+}
 scale_along_z: 0
 embedded_instances {
-  id: "Jugador"
+  id: "Camara"
   data: "embedded_components {\n"
-  "  id: \"sprite\"\n"
-  "  type: \"sprite\"\n"
-  "  data: \"default_animation: \\\"corrrer\\\"\\n"
-  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
-  "textures {\\n"
-  "  sampler: \\\"texture_sampler\\\"\\n"
-  "  texture: \\\"/sprites/jugador.atlas\\\"\\n"
-  "}\\n"
+  "  id: \"camera\"\n"
+  "  type: \"camera\"\n"
+  "  data: \"aspect_ratio: 1.0\\n"
+  "fov: 0.7854\\n"
+  "near_z: 0.1\\n"
+  "far_z: 1000.0\\n"
+  "auto_aspect_ratio: 1\\n"
+  "orthographic_projection: 1\\n"
+  "orthographic_mode: ORTHO_MODE_AUTO_FIT\\n"
   "\"\n"
-  "  position {\n"
-  "    x: 11.0\n"
-  "    y: 10.0\n"
-  "  }\n"
   "}\n"
   ""
   position {
-    x: 8.0
-    y: 11.0
+    x: 128.0
+    y: 72.0
+    z: 1.0
   }
 }
