@@ -3,6 +3,8 @@ function init(self)
 	self. dir = vmath.vector3()
 	self.velocidad = 100
 	self.vidas = 3
+	self.mp = 6
+	msg.post("/GUI#HUD", "iniciar_ui", {vidas = self.vidas, mana = self.mp})
 end
 
 function update(self, dt)
@@ -18,7 +20,10 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("trigger_response") and message.enter then
 		--go.delete(message.other_id)
 		self.vidas =  self.vidas - 1
-		msg.post("#HUD", "take_damage", {vidas = self.vidas})
+		if self.vidas > -1 then
+			msg.post("/GUI#HUD", "take_damage", {vidas = self.vidas})
+		end
+		
 	end
 end
 
