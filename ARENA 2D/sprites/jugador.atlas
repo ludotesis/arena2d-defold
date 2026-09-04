@@ -1,0 +1,21 @@
+images {
+  image: "/sprites/jugador/jugador1.png"
+}
+animations {
+  id: "corrrer"
+  images {
+    image: "/sprites/jugador/jugador1.png"
+  }
+  images {
+    image: "/sprites/jugador/jugador5.png"
+  }
+  images {
+    image: "/sprites/jugador/jugador9.png"
+  }
+  images {
+    image: "/sprites/jugador/jugador13.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 12
+}
+extrude_borders: 2
