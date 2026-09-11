@@ -2,7 +2,7 @@ images {
   image: "/sprites/jugador/jugador1.png"
 }
 animations {
-  id: "corrrer_abajo"
+  id: "correr_abajo"
   images {
     image: "/sprites/jugador/jugador1.png"
   }
@@ -19,7 +19,7 @@ animations {
   fps: 12
 }
 animations {
-  id: "corrrer_arriba"
+  id: "correr_arriba"
   images {
     image: "/sprites/jugador/jugador2.png"
   }
