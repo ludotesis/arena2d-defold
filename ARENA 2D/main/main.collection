@@ -11,8 +11,8 @@ instances {
   id: "samurai"
   prototype: "/go/samurai.go"
   position {
-    x: 129.43236
-    y: 39.925594
+    x: 212.43236
+    y: 78.92559
   }
 }
 scale_along_z: 0

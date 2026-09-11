@@ -19,6 +19,7 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("take_damage") then
 		print(message.vidas)
 		gui.set_text(self.text_hp, "HP "..message.vidas)
+		gui.animate(self.text_hp, gui.PROP_COLOR, vmath.vector4(1, 0, 0, 1), gui.EASING_INOUTQUAD, 0.1, 0 , nil , gui.PLAYBACK_ONCE_PINGPONG)
 	end
 
 	if message_id == hash("iniciar_ui") then
