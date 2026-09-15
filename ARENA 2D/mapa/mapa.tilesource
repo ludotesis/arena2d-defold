@@ -1,0 +1,4 @@
+image: "/mapa/Tileset.png"
+tile_width: 16
+tile_height: 16
+collision_groups: "mapa"
