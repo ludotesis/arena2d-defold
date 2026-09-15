@@ -1,10 +1,13 @@
 go.property("direccion", vmath.vector3(1, 0, 0))
-go.property("velocidad", 20)
+go.property("velocidad", 200)
 
 function init(self)
 	if vmath.length(self.direccion) > 0 then
 		self.direccion = vmath.normalize(self.direccion)
 	end
+
+	local angulo = math.atan2(self.direccion.y, self.direccion.x)
+	go.set_rotation(vmath.quat_rotation_z(angulo))
 end
 
 function update(self, dt)

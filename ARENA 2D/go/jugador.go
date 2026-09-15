@@ -39,3 +39,9 @@ embedded_components {
   "}\n"
   ""
 }
+embedded_components {
+  id: "kunai_factory"
+  type: "factory"
+  data: "prototype: \"/go/kunai.go\"\n"
+  ""
+}
