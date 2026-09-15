@@ -1,6 +1,9 @@
 images {
   image: "/sprites/jugador/jugador1.png"
 }
+images {
+  image: "/sprites/armas/Kunai.png"
+}
 animations {
   id: "correr_abajo"
   images {
