@@ -90,8 +90,12 @@ function on_input(self, action_id, action)
 	elseif action_id == hash("derecha") then self.dir.x = 1
 	elseif action_id == hash("ataque") and action.pressed then
 		print("ATACAR")
+
 		local posicion_spawn = go.get_position()
+		local margen_separacion = 16
+		posicion_spawn = posicion_spawn + (self.direccion_mirada * margen_separacion)
 		posicion_spawn.z = 0.6
+		
 		local propiedades = { direccion = self.direccion_mirada }
 		local id_del_kunai = factory.create("#kunai_factory", posicion_spawn, nil, propiedades)
 		print("El factory generó el objeto con el ID:", id_del_kunai)

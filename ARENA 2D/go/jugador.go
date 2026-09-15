@@ -23,6 +23,7 @@ embedded_components {
   "group: \"default\"\n"
   "mask: \"default\"\n"
   "mask: \"mapa\"\n"
+  "mask: \"enemigo\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"
