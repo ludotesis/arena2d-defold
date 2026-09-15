@@ -17,6 +17,54 @@ instances {
     z: 0.5
   }
 }
+instances {
+  id: "kunai"
+  prototype: "/go/kunai.go"
+  position {
+    x: 176.48125
+    y: 117.679855
+  }
+  component_properties {
+    id: "kunai"
+    properties {
+      id: "velocidad"
+      value: "10.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+}
+instances {
+  id: "kunai1"
+  prototype: "/go/kunai.go"
+  position {
+    x: 176.48125
+    y: 46.67985
+  }
+  component_properties {
+    id: "kunai"
+    properties {
+      id: "velocidad"
+      value: "10.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+}
+instances {
+  id: "kunai2"
+  prototype: "/go/kunai.go"
+  position {
+    x: 176.48125
+    y: 77.679855
+  }
+  component_properties {
+    id: "kunai"
+    properties {
+      id: "velocidad"
+      value: "20.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+}
 scale_along_z: 0
 embedded_instances {
   id: "Camara"
@@ -67,6 +115,7 @@ embedded_instances {
   "restitution: 0.5\\n"
   "group: \\\"mapa\\\"\\n"
   "mask: \\\"default\\\"\\n"
+  "mask: \\\"armas\\\"\\n"
   "\"\n"
   "}\n"
   ""

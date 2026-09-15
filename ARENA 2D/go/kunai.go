@@ -1,3 +1,12 @@
+components {
+  id: "kunai"
+  component: "/scripts/kunai.script"
+  properties {
+    id: "velocidad"
+    value: "5.0"
+    type: PROPERTY_TYPE_NUMBER
+  }
+}
 embedded_components {
   id: "sprite"
   type: "sprite"
@@ -8,6 +17,13 @@ embedded_components {
   "  texture: \"/atlas/jugador.atlas\"\n"
   "}\n"
   ""
+  position {
+    z: 0.5
+  }
+  rotation {
+    z: -0.38268343
+    w: 0.9238795
+  }
   scale {
     x: 0.5
     y: 0.5
@@ -22,12 +38,12 @@ embedded_components {
   "restitution: 0.5\n"
   "group: \"armas\"\n"
   "mask: \"default\"\n"
+  "mask: \"mapa\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
   "    shape_type: TYPE_SPHERE\n"
   "    position {\n"
   "      x: 1.0\n"
-  "      y: 1.0\n"
   "    }\n"
   "    rotation {\n"
   "    }\n"
