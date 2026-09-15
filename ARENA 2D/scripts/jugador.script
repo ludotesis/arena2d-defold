@@ -12,7 +12,7 @@ end
 
 function update(self, dt)
 
-	local animacion = nil
+	local animacion = hash("jugador1")
 	
 	if self.dir.y > 0 then
 		animacion = hash("correr_arriba")
@@ -22,8 +22,6 @@ function update(self, dt)
 		animacion = hash("correr_derecha")
 	elseif self.dir.x < 0 then
 		animacion = hash("correr_izquierda")
-	else
-		animacion = hash("jugador1")
 	end
 
 	if animacion and animacion ~= self.animacion_actual then

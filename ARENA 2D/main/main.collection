@@ -18,7 +18,11 @@ instances {
 scale_along_z: 0
 embedded_instances {
   id: "Camara"
-  data: "embedded_components {\n"
+  data: "components {\n"
+  "  id: \"camara\"\n"
+  "  component: \"/scripts/camara.script\"\n"
+  "}\n"
+  "embedded_components {\n"
   "  id: \"camera\"\n"
   "  type: \"camera\"\n"
   "  data: \"aspect_ratio: 1.0\\n"
